@@ -18,9 +18,9 @@ io.on('connection', socket => {
     console.log('Someone left')
   })
 
-  socket.on('stripe', () => {
-    console.log("clicked")
-    socket.broadcast.emit("paintblack")
+  socket.on('clicked', num => {
+    console.log("clicked " + num)
+    socket.broadcast.emit("toggle", num)
   })
 
   setTimeout(() => {
