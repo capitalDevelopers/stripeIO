@@ -17,9 +17,6 @@ server.listen(PORT, () => console.log(`Server running on port ${PORT}`))
 const connections = [null, null]
 
 io.on('connection', socket => {
-  // console.log('New WS Connection')
-
-  // Find an available player number
   let playerIndex = -1;
   for (const i in connections) {
     if (connections[i] === null) {
@@ -31,7 +28,7 @@ io.on('connection', socket => {
   // Tell the connecting client what player number they are
   socket.emit('player-number', playerIndex)
 
-  console.log(`Player ${playerIndex} has connected`)
+  console.log(`Player ${playerIndex} hasdfs connected`)
 
   // Ignore player 3
   if (playerIndex === -1) return
@@ -55,6 +52,11 @@ io.on('connection', socket => {
     connections[playerIndex] = true
   })
 
+  // On Ready
+  socket.on('stripe2', id => {
+    console.log("clicked 2")
+    socket.broadcast.emit("paintblack")
+  })
   // Check player connections
   socket.on('check-players', () => {
     const players = []
@@ -65,6 +67,10 @@ io.on('connection', socket => {
   })
 
   // On Fire Received
+  socket.on("hello", () => {
+        console.log("hello")
+  })
+
   socket.on('fire', id => {
     console.log(`Shot fired from ${playerIndex}`, id)
 

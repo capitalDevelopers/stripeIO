@@ -9,41 +9,17 @@ div {
 }
 
 div.stripe1 {
-	background-color: #882244;
-	visibility: true;
+	background-color: #ffff44;
 }
 
 div.stripe2 {
 	background-color: #226644;
-	visibility: true;
 }
 
 div.stripe3 {
 	background-color: #222288;
-	visibility: true;
 }
 
 div.stripe4 {
 	background-color: #888844;
-	visibility: true;
-}
-
-div.stripe5 {
-	background-color: #222244;
-	visibility: true;
-}
-
-div.stripe6 {
-	background-color: #118888;
-	visibility: true;
-}
-
-div.stripe7 {
-	background-color: #882288;
-	visibility: true;
-}
-
-div.stripe8 {
-	background-color: #222244;
-	visibility: true;
 }
