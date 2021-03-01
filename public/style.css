@@ -8,18 +8,6 @@ div {
 	height: 100px;
 }
 
-div.stripe1 {
+div.stripe {
 	background-color: #ffff44;
-}
-
-div.stripe2 {
-	background-color: #226644;
-}
-
-div.stripe3 {
-	background-color: #222288;
-}
-
-div.stripe4 {
-	background-color: #888844;
 }
